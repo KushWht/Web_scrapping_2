@@ -23,11 +23,11 @@ radius = []
 
 for i in range(1, len(temp_list)):
     star_name.append(temp_list[i][0])
-    distance.append(temp_list[i][0])
-    mass.append(temp_list[i][0])
-    radius.append(temp_list[i][0])
+    distance.append(temp_list[i][5])
+    mass.append(temp_list[i][7])
+    radius.append(temp_list[i][8])
 
 df2 = pd.DataFrame(list(zip(star_name, distance, mass, radius)), columns=["Star Name", "Distance", "Mass", "Radius"])
 print(df2)
 
-df2.to_csv('star.csv')
+df2.to_csv('dwarf_stars.csv')
